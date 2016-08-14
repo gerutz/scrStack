@@ -1,12 +1,12 @@
 var cheerio = require('cheerio');
-var  request = require('request');
+var request = require('request');
 
-var  url = 'http://stackoverlflow.com/questions?pagesize=50&sort=frequent';
+var  url = 'http://stackoverflow.com/questions?page=2&sort=frequent';
 
 request(url, function(error, response, body){
 
   if(!error){
-    var $ = cheerio.load(response);
+    var $ = cheerio.load(body);
     var q = $('a.question-hyperlink').text();
     console.log(q);
   }else{
