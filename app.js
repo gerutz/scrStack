@@ -17,7 +17,7 @@ request(url, (error, response, body) => {
       //console.log(typeof(questions));
       for (var q in questions){
         for (var i=0; i<50 ; i++){
-          faq.push("q"+i+":"+questions[i].children[0].data);
+          faq.push('\n' + questions[i].children[0].data );
         }
       }
       console.log(faq);
