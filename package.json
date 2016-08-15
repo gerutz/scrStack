@@ -4,6 +4,7 @@
   "description": "Scrapping de Stackoverflow",
   "dependencies": {
     "cheerio": "^0.20.0",
+    "fs-writefile-promise": "^1.0.3",
     "request": "^2.74.0"
   }
 }
