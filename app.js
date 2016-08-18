@@ -15,11 +15,11 @@ request(url, (error, response, body) => {
       const questions = $('a.question-hyperlink');
 
       //console.log(typeof(questions));
-      for (var q in questions){
+      //for (var q in questions){
         for (var i=0; i<50 ; i++){
           faq.push('\n' + questions[i].children[0].data );
         }
-      }
+      //}
       console.log(faq);
 
       write('faq.txt',faq)
